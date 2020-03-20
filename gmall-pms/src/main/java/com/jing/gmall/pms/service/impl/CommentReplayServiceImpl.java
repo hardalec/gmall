@@ -1,10 +1,11 @@
 package com.jing.gmall.pms.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.jing.gmall.pms.entity.CommentReplay;
 import com.jing.gmall.pms.mapper.CommentReplayMapper;
 import com.jing.gmall.pms.service.CommentReplayService;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
  * @since 2020-03-19
  */
 @Service
+@Component
 public class CommentReplayServiceImpl extends ServiceImpl<CommentReplayMapper, CommentReplay> implements CommentReplayService {
 
 }
