@@ -1,18 +1,14 @@
-package com.jing.gmall.ums;
+package com.jing.gmall.admin;
 
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-
-@MapperScan(basePackages = "com.jing.gmall.ums.mapper")
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 @EnableDubbo
-@SpringBootApplication
-public class GmallUmsApplication {
-
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class GmallAdminWebApplication {
     public static void main(String[] args) {
-        SpringApplication.run(GmallUmsApplication.class, args);
+        SpringApplication.run(GmallAdminWebApplication.class, args);
     }
-
 }

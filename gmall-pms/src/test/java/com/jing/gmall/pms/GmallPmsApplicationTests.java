@@ -20,13 +20,13 @@ class GmallPmsApplicationTests {
 
     @Test
     void contextLoads() {
-//        Product byId = productService.getById(1);
-//        System.out.println(byId.getName());
+        Product byId = productService.getById(1);
+        System.out.println(byId.getName());
 
-        Brand brand = new Brand();
-        brand.setName("lalalal");
-        brandService.save(brand);
-        System.out.println("chenggong");
+//        Brand brand = new Brand();
+//        brand.setName("nihao");
+//        brandService.save(brand);
+//        System.out.println("陈工公共哦你弄i你离开那里");
     }
 
 }

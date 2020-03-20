@@ -1,7 +1,7 @@
 package com.jing.gmall.ums.service;
 
-import com.jing.gmall.ums.entity.MemberTag;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.jing.gmall.ums.entity.MemberTag;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author Lfy
- * @since 2020-03-19
+ * @since 2019-03-19
  */
 public interface MemberTagService extends IService<MemberTag> {
 

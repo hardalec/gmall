@@ -1,7 +1,7 @@
 package com.jing.gmall.ums.service;
 
-import com.jing.gmall.ums.entity.Admin;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.jing.gmall.ums.entity.Admin;
 
 /**
  * <p>
@@ -9,8 +9,12 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author Lfy
- * @since 2020-03-19
+ * @since 2019-03-19
  */
 public interface AdminService extends IService<Admin> {
 
+    //登陆
+    Admin login(String username, String password);
+
+    Admin getUserInfo(String userName);
 }

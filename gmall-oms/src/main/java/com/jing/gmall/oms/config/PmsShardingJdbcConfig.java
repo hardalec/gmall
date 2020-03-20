@@ -1,4 +1,4 @@
-package com.jing.gmall.pms.config;
+package com.jing.gmall.oms.config;
 
 import io.shardingjdbc.core.api.MasterSlaveDataSourceFactory;
 import org.springframework.context.annotation.Bean;
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @Configuration
-public class PmsDatasourceConfig {
+public class PmsShardingJdbcConfig {
     @Bean
     public DataSource dataSource() throws IOException, SQLException {
         File file = ResourceUtils.getFile("classpath:sharding-jdbc.yml");

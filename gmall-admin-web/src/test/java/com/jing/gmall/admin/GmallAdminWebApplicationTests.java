@@ -1,23 +1,23 @@
-package com.jing.gmall.ums;
+package com.jing.gmall.admin;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.jing.gmall.ums.entity.Admin;
-import com.jing.gmall.ums.mapper.AdminMapper;
 import com.jing.gmall.ums.service.AdminService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.DigestUtils;
 
 @SpringBootTest
-class GmallUmsApplicationTests {
-    @Autowired
+class GmallAdminWebApplicationTests {
+    @Reference
     AdminService adminService;
 
     @Test
     void contextLoads() {
-        Admin admin = adminService.login("admin", "123456");
-        System.out.println(admin);
+//        Admin admin = adminService.login("admin", "123456");
+//        System.out.println(admin);
+        Admin byId = adminService.getById(1);
+        System.out.println(byId);
     }
 
 }
