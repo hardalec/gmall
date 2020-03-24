@@ -1,7 +1,10 @@
 package com.jing.gmall.pms.mapper;
 
+import com.jing.gmall.pms.entity.ProductCategory;
 import com.jing.gmall.pms.entity.ProductCategoryAttributeRelation;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.List;
 
 /**
  * <p>

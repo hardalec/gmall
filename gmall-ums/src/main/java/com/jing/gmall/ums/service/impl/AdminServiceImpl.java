@@ -27,7 +27,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     public Admin login(String username, String password) {
         //Spring自带的md5工具类
         String digest = DigestUtils.md5DigestAsHex(password.getBytes());
-        QueryWrapper<Admin> wrapper = new QueryWrapper<Admin>().eq("username", username).eq("username", username);
+        QueryWrapper<Admin> wrapper = new QueryWrapper<Admin>().eq("username", username).eq("password", digest);
         Admin admin = adminMapper.selectOne(wrapper);
         return admin;
     }

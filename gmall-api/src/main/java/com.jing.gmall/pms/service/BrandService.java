@@ -2,6 +2,7 @@ package com.jing.gmall.pms.service;
 
 import com.jing.gmall.pms.entity.Brand;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.jing.gmall.vo.PageInfoVo;
 
 /**
  * <p>
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface BrandService extends IService<Brand> {
 
+    PageInfoVo productPageInfo(String keyword, Integer pageNum, Integer pageSize);
 }

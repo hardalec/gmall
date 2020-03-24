@@ -2,6 +2,9 @@ package com.jing.gmall.pms.mapper;
 
 import com.jing.gmall.pms.entity.Product;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jing.gmall.vo.productvo.PmsProductCategoryWithChildrenItem;
+
+import java.util.List;
 
 /**
  * <p>

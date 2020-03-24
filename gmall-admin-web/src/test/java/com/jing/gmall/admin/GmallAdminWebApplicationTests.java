@@ -3,7 +3,6 @@ package com.jing.gmall.admin;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.jing.gmall.pms.entity.Product;
 import com.jing.gmall.pms.service.ProductService;
-import com.jing.gmall.ums.entity.Admin;
 import com.jing.gmall.ums.service.AdminService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +14,7 @@ class GmallAdminWebApplicationTests {
     AdminService adminService;
     @Reference
     ProductService productService;
+
     @Test
     void contextLoads() {
 //        Admin byId = adminService.getById(1);

@@ -7,6 +7,7 @@ import com.jing.gmall.pms.service.ProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
 
 
 @SpringBootTest
@@ -14,19 +15,21 @@ class GmallPmsApplicationTests {
 
     @Autowired
     ProductService productService;
-
     @Autowired
     BrandService brandService;
+    @Autowired
+    StringRedisTemplate redisTemplate;
 
     @Test
     void contextLoads() {
         Product byId = productService.getById(1);
         System.out.println(byId.getName());
-
-//        Brand brand = new Brand();
-//        brand.setName("nihao");
-//        brandService.save(brand);
-//        System.out.println("陈工公共哦你弄i你离开那里");
     }
 
+    @Test
+    public void setRedisTemplate(){
+        redisTemplate.opsForValue().set("k2", "v2");
+        String k1 = redisTemplate.opsForValue().get("k2");
+        System.out.println(k1);
+    }
 }
